@@ -17,26 +17,30 @@ type user struct {
 }
 
 // Create a function that changes the value of one of the user fields.
-func funcName( /* add pointer parameter, add value parameter */ ) {
+// func funcName( /* add pointer parameter, add value parameter */ ) {
 
 	// Use the pointer to change the value that the
 	// pointer points to.
-}
+// }
 
 func main() {
 
 	// Create a variable of type user and initialize each field.
     jane := user {
         name: "Jane",
-        email: "jane@example.com"
+        email: "jane@example.com",
     }
 
 	// Display the value of the variable.
     fmt.Println("email:", jane.email)
 
 	// Share the variable with the function you declared above.
-    someFunc()
+    someFunc(&jane, "jane2@example.com")
 
 	// Display the value of the variable.
     fmt.Println("email:", jane.email)
+}
+
+func someFunc(u *user, email string) {
+    u.email = email
 }
