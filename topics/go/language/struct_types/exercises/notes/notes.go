@@ -45,7 +45,7 @@ type Dog struct {
 //   if cat.Basics.mean == true {
 //       meowStrength = meowStrength * 5
 //   }
-//   
+// 
 //   for meow := 0; meow < meowStrength; meow ++ {
 //       fmt.Printf("MEOW ")
 //   }
