@@ -27,10 +27,19 @@ func main() {
 
 	// Declare variables and initialize.
 	// Using the short variable declaration operator.
+	today := 17
+	dayOfWeek := "What happened to Monday?"
+	camelDay := false
 
 	// Display the value of those variables.
+	fmt.Println(today)
+	fmt.Println(dayOfWeek)
+	fmt.Println(camelDay)
 
 	// Perform a type conversion.
+	pi := float32(3.14)
 
 	// Display the value of that variable.
+	// Type, value
+	fmt.Printf("%T [%v]\n", pi, pi)
 }
