@@ -80,7 +80,7 @@ func (animal *Animal) PerformNoise(strength int, sound string) {
     }
 
     for voice := 0; voice < strength; voice ++ {
-        fmt.Println("%s ", sound)
+        fmt.Println(sound)
     }
 
     fmt.Println("")
