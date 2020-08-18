@@ -25,6 +25,11 @@ func main() {
     fmt.Println(port)
 	// Divide a constant of kind integer and kind floating point and
 	// assign the result to a variable.
-
+    
+    // Calculate number of hours in 525600 minutes.
+    hours := 525600 / 60.0
+    fmt.Println("===")
+    fmt.Println(hours, "hours, you say?")
+    fmt.Println("Nope. Rent - Seasons of Love.")
 	// Display the value of the variable.
 }
