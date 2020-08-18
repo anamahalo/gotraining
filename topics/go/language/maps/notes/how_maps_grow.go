@@ -35,3 +35,8 @@
 // that space *during* initialization.
 // (Also why maps are unsorted collections and why iterators
 // *seem* random when mapping)
+
+// Instead of N runtime.hashmap implementations in the final binary,
+// only N runtime.maptype *values* - program space saving and compile
+// time.
+// (For contrast, C++ has N runtime.hashmap implementations in final)
