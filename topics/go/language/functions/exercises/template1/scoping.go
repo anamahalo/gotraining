@@ -1,3 +1,8 @@
+// See template1_ex.go - user v. u, *user v. *u explanation
+// References:
+// https://golang.org/src/go/ast/scope.go
+// https://golang.org/ref/spec#Declarations_and_scope
+
 package main
 
 import (
