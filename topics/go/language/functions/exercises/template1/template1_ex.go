@@ -30,13 +30,15 @@ func main() {
 
 	// Use the function to create a value of type user. Check
 	// the error being returned.
-    user, err := thisIsSparta()
+    // This should be "u" and not "user" b/c we want to keep things
+    // scoped, i.e.: we don't want to alias the type name (see scoping.go)
+    u, err := thisIsSparta()
     if err != nil {
         fmt.Println(err)
         return
     }
 	// Display the value that the pointer points to.
-    fmt.Println(*user)
+    fmt.Println(*u)
 	// Call the function again and just check the error.
     _, err = thisIsSparta()
     if err != nil {
