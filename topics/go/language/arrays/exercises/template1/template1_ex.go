@@ -16,10 +16,10 @@ func main() {
 	// Declare an array of 5 strings set to its zero value.
     var names [5]string
 	// Declare an array of 5 strings and pre-populate it with names.
-    gameOfThrones := [5]string{"Jon Snow", "Arya Stark", "Daenerys", 
+    gotCharacters := [5]string{"Jon Snow", "Arya Stark", "Daenerys", 
 "Theon", "Tyrion Lannister"}
 	// Assign the populated array to the array of zero values.
-    names = gameOfThrones
+    names = gotCharacters
 	// Iterate over the first array declared.
 	// Display the string value and address of each element.
     for i, name := range names {
