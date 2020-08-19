@@ -30,3 +30,12 @@
 //          Can only declare method set of behavior
 //          .: Nothing concrete about interface type
 //  See notes example
+
+
+
+// =================
+// Value semantics
+//  Interface can store its own copy of a value
+// Pointer semantics
+//  Value can be shared w/the interface by storing a COPY
+//  of the value's address
