@@ -39,3 +39,8 @@
 // Pointer semantics
 //  Value can be shared w/the interface by storing a COPY
 //  of the value's address
+
+// Code reviews:
+// Look for consistency in semantic for data of
+// given type and question code that violates it
+// Exceptions should occur as conscious choice
