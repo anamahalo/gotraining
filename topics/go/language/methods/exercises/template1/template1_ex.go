@@ -45,8 +45,9 @@ func main() {
         fmt.Printf("%s: AVG[.%.f]\n", ps[i].name, ps[i].average()*1000)
     }
 
-    // Better
     fmt.Printf("============\n")
+
+    // Better
     for _, p := range ps {
         fmt.Printf("%s: AVG[.%.f]\n", p.name, p.average()*1000)
     }
