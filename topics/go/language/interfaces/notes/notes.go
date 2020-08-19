@@ -26,4 +26,7 @@
 // .: Interfaces!
 //      Structs as types of concrete data
 //      Vars as values of type
+//      Interface - opposite of struct type
+//          Can only declare method set of behavior
+//          .: Nothing concrete about interface type
 //  See notes example
