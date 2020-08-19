@@ -17,13 +17,37 @@ type player struct {
     hits   int
 }
 // Declare a method that calculates the batting average for a player.
-func ( /* receiver */ ) average() /* return type */ {
+// func ( /* receiver */ ) average() /* return type */ {
+// }
+
+func (p *player) average() float64 {
+    if p.atBats == 0 {
+        return 0.0
+    }
+
+    return float64(p.hits) / float64(p.atBats)
 }
 
 func main() {
 
 	// Create a slice of players and populate each player
 	// with field values.
+    // player is p so pl is ps
+    ps := []player{
+        {"Sammy", 7, 2},
+        {"Babe", 20, 10},
+        {"Shrug", 30, 2},
+    }
 
 	// Display the batting average for each player in the slice.
+
+    for i := range ps {
+        fmt.Printf("%s: AVG[.%.f]\n", ps[i].name, ps[i].average()*1000)
+    }
+
+    // Better
+    fmt.Printf("============\n")
+    for _, p := range ps {
+        fmt.Printf("%s: AVG[.%.f]\n", p.name, p.average()*1000)
+    }
 }
