@@ -68,7 +68,7 @@ type sysadmin struct {
 // administrator interface. administrate should print out the name of the
 // sysadmin, as well as the system they are administering.
 func (s *sysadmin) administrate(system string) {
-    fmt.Println(s.name, "| administering: ", system)
+    fmt.Println(s.name, "is administering:", system)
 }
 // Declare a concrete type named programmer with a name field of type string.
 type programmer struct {
@@ -78,7 +78,7 @@ type programmer struct {
 // developer interface. develop should print out the name of the
 // programmer, as well as the system they are coding.
 func (p *programmer) develop(system string) {
-    fmt.Println(p.name, "| coding: ", system)
+    fmt.Println(p.name, "is coding:", system)
 }
 // Declare a concrete type named company. Declare it as the composition of
 // the administrator and developer interface types.
