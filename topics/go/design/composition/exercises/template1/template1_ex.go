@@ -92,19 +92,24 @@ type company struct {
 func main() {
 
 	// Create a variable named admins of type adminlist.
-
+    var admins adminlist 
 	// Create a variable named devs of type devlist.
-
+    var devs devlist
 	// Enqueue a new sysadmin onto admins.
-
+    admins.Enqueue(&sysadmin{"Jane"})        
 	// Enqueue two new programmers onto devs.
-
+    devs.Enqueue(&programmer{"John"})
+    devs.Enqueue(&programmer{"Ariel"})
 	// Create a variable named cmp of type company, and initialize it by
 	// hiring (dequeuing) an administrator from admins and a developer from devs.
-
+    cmp := company{
+        administrator: admins.Dequeue(),
+        developer:     devs.Dequeue(),
+    }
 	// Enqueue the company value on both lists since the company implements
 	// each interface.
-
+    admins.Enqueue(&cmp)
+    devs.Enqueue(&cmp)
 	// A set of tasks for administrators and developers to perform.
 	tasks := []struct {
 		needsAdmin bool
@@ -119,15 +124,19 @@ func main() {
 	for _, task := range tasks {
 
 		// Check if the task needs an administrator else use a developer.
-		if {
+		if task.needsAdmin {
 
 			// Dequeue an administrator value from the admins list and
 			// call the administrate method.
+            admin := admins.Dequeue()
+			admin.administrate(task.system)
 
-			continue
+            continue
 		}
-
+        // ELSE STARTS HERE
 		// Dequeue a developer value from the devs list and
 		// call the develop method.
+        dev := devs.Dequeue()
+        dev.develop(task.system)
 	}
 }
