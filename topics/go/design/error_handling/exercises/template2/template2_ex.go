@@ -36,6 +36,11 @@ func (a *appError) Temporary() bool {
     }
     return false
 }
+// just `return a.code !=9` is simpler but personally I think the above
+// has less strain on one's mental model b/c you can just read it
+// however, `return a.code !=9` might be more likely seen in Golang world
+
+
 // Declare the temporary interface type with a method named Temporary that
 // takes no parameters and returns a bool.
 type temporary interface {
